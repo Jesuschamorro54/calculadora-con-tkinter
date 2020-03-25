@@ -5,7 +5,7 @@ class Interfaz:
         #Crear la ventana raiz con titulo
         self.ventana = ventana
         self.ventana.title("Calculadora")
-        self.ventana.iconbitmap("cal.ico")
+        self.ventana.iconbitmap("C:/Users/jesus/OneDrive/Escritorio/Mi Espacio/codigos/estructura de datos/proyecto_cuarentena/pruebas/calculadora.ico")
         self.ventana.resizable(False, False)
         frame = Frame(self.ventana, width=248, height=219, background="#F7F7F7", padx=5, pady=5)
         frame.grid(row=1, column=0, columnspan=3, padx=5, pady=5)
