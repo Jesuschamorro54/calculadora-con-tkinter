@@ -65,13 +65,18 @@ class Interfaz:
         if not escribir:
             if texto== "=" and self.operation!="" and not self.operation[0] == "*" and not self.operation[0] == "/":
                 resultado = str(eval(self.operation))
-                self.operation=""
+                self.operation= resultado
                 self.Limpiar()
                 self.Mostrar(resultado)
 
             elif texto == u"\u232b":  # si es borrar
-                self.operation=""
+                self.operation= self.operation[:-1]
                 self.Limpiar()
+                self.Mostrar(self.operation)
+                print(self.operation)
+
+                #self.Limpiar()
+                #self.operation = ""
 
         #Sino, si se muestra por tablero
         else:
@@ -90,9 +95,9 @@ class Interfaz:
         return
 
     def Mostrar(self, valor):
-        self.tablero.configure(state ="normal")
+        self.tablero.configure(state="normal")
         self.tablero.insert(END, valor)
-        self.tablero.configure(state= "disabled")
+        self.tablero.configure(state="disabled")
         return
 
 root=Tk()
